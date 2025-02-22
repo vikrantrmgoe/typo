@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <!-- ✅ SEO Meta Tags -->
     <title>TypeOnline - Improve Your Typing Speed</title>
     <meta name="description" content="Enhance your typing speed with TypeOnline. Test your typing skills, improve accuracy, and track your progress with real-time statistics.">
-    <meta name="keywords" content="typing test, online typing, typing speed, improve typing, typing practice, fast typing, keyboard skills">
+    <meta name="keywords" content="typing test, online typing, typing speed, improve typing, typing practice, fast typing, keyboard skills, type test online, touch typing">
     <meta name="author" content="Your Name or Brand">
     
     <!-- ✅ Open Graph (For Social Media) -->
@@ -24,7 +24,10 @@
     <meta name="twitter:description" content="Take a free online typing test and track your progress with real-time stats.">
     <meta name="twitter:image" content="https://typeonline.in/images/preview.png">
     
-    <!-- ✅ Favicon (Update Paths) -->
+    <!-- ✅ Google Search Verification -->
+    <meta name="google-site-verification" content="s8uCoNRSMGHMA68Mh3QM-YGeouBfJatLJWv9JrPbYPQ" />
+    
+    <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- ✅ Stylesheets -->
@@ -41,19 +44,64 @@
 
     <!-- ✅ Chart.js for Statistics -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <meta name="google-site-verification" content="s8uCoNRSMGHMA68Mh3QM-YGeouBfJatLJWv9JrPbYPQ" />
+
+    <!-- ✅ Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TypeOnline",
+      "url": "https://typeonline.in/",
+      "description": "Enhance your typing speed with TypeOnline. Test your typing skills, improve accuracy, and track your progress with real-time statistics.",
+      "image": "https://typeonline.in/images/preview.png",
+      "sameAs": [
+        "https://www.facebook.com/TypeOnline",
+        "https://twitter.com/TypeOnline",
+        "https://www.instagram.com/TypeOnline"
+      ]
+    }
+    </script>
 </head>
 
-    
-    
-    <body>
-        <div id="app">
-            <typing-test-result v-show="result_test_component" :score="typing_test_score" :scorelist="typing_chart_score"></typing-test-result>
-            <typing-keyboard v-show="typing_test_component"></typing-keyboard>
-            <typing-test-component v-show="typing_test_component" @show-result="showHideComponents"></typing-test-result>
-        </div>
-    </body>
+<body>
+    <header>
+        <h1>Welcome to TypeOnline - Free Typing Test</h1>
+        <p>Test your typing speed and accuracy in real time. Improve your skills with our typing practice tool.</p>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="typing-tips.html">Typing Tips</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="app">
+        <typing-test-result v-show="result_test_component" :score="typing_test_score" :scorelist="typing_chart_score"></typing-test-result>
+        <typing-keyboard v-show="typing_test_component"></typing-keyboard>
+        <typing-test-component v-show="typing_test_component" @show-result="showHideComponents"></typing-test-component>
+    </div>
+
+    <section>
+        <h2>How It Works</h2>
+        <p>Our typing test helps you track your words per minute (WPM), accuracy, and progress over time.</p>
+        <ul>
+            <li>✔ Real-time WPM calculation</li>
+            <li>✔ Detailed accuracy tracking</li>
+            <li>✔ Personalized typing history</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 TypeOnline. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/TypeOnline">Facebook</a> |
+            <a href="https://twitter.com/TypeOnline">Twitter</a> |
+            <a href="https://www.instagram.com/TypeOnline">Instagram</a>
+        </p>
+    </footer>
 
     <!-- Import Our Data -->
     <script src="./data/data.js"></script>  
@@ -65,31 +113,5 @@
     <script src="components/resultTest.js"></script>
     <!-- Mount Our App -->
     <script>app.mount("#app")</script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <div class="result-section">
-                <div class="left-result-section">
-                    <div class="wpm-res">
-                        <span>WPM</span>
-                        <h1>50</h1>
-                    </div>
-                    <div class="time-res">
-                        <span>time</span>
-                        <h1>30s</h1>
-                    </div>
-                </div>
-            </div> -->
